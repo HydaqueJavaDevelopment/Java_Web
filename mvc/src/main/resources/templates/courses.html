@@ -1,0 +1,31 @@
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="courses-header">
+        <h1 style="display: inline;">Courses</h1>
+        <a class="courses-button export" role="button" th:href="@{/course}">
+            <img class="courses-header-button-image" src="export.png"/>
+            <span  class="courses-header-button-text">Export</span>
+        </a>
+        <a class="courses-button new-course" role="button" th:href="@{/course}">
+            <img class="courses-header-button-image" src="new.png"/>
+            <span  class="courses-header-button-text">Add Course</span>
+        </a>
+    </div>
+
+<div>
+        <div class="course-container" th:each="course : ${coursesList}">
+            <div class="course-header">
+                <h2 th:text="${course.title}"></h2>
+                <a class="course-header-button" role="button" th:href="@{/course(Id=${course.Id},action=1)}">View</a>
+                <a class="course-header-button edit" role="button" th:href="@{/course(Id=${course.Id},action=2)}">Edit</a>
+                <a class="course-header-button enroll" role="button" th:href="@{/course(Id=${course.Id},action=3)}">Enroll</a>
+                <a class="course-header-button remove" role="button" th:href="@{/course(Id=${course.Id},action=4)}">Remove</a>
+            </div>
+            <p th:text="${course.description.length > 0} ? ${course.description} : '<No Description Available>'"></p>
+            Duration: <b th:text="${course.duration}"></b> hours
+        </div>
+</div>
+</body>

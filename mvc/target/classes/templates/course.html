@@ -1,0 +1,15 @@
+<head>
+    <title th:text="${course.title.length > 0} ? ${course.title} : 'New Course'"></title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<form class="course-form" style="place-self: center;align-items: center;" th:object="${course}" method="post"
+th:action="@{/postCourse}">
+<p th:text="*{title}"></p>
+<input type="text" th:field="*{title}">
+<input type="text" th:field="*{description}">
+<input type="text" th:field="*{duration}">
+<input type="hidden" th:field="*{id}">
+<input type="submit" class="submit" value="Save">
+</form>
+</body>

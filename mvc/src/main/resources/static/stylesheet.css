@@ -1,0 +1,75 @@
+body{
+    background-color: darkslategray;
+    color:white;
+    font-family: 'calibri';
+}
+input{
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin:10px;
+}
+.submit{
+    background-color: black;
+    color: chartreuse;
+    border-radius: 10px;
+}
+.course-container{
+    border: 2px solid white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.course-header-button{
+    color:white;
+    background-color: dimgrey;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+.edit , .export{
+    background-color:  darkblue;
+}
+.enroll, .new-course{
+    background-color: darkgreen;
+}
+.remove{
+    background-color: darkred;
+}
+.course-header{
+    display: flex;align-items: center;
+}
+.courses-header{
+    width: 100%;
+    margin-bottom:40px;
+    margin-top: 20px;
+}
+.courses-header-text{
+    float: left;
+}
+.courses-button{
+    float: right;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    border: double 2px white;
+    border-style: double;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.courses-header-button-image{
+    
+    width:25px;
+    height:25px;
+    margin-right:15px;
+}
+.courses-header-button-text{
+    font-size: 18px;
+}
